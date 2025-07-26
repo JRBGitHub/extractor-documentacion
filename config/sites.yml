@@ -1,0 +1,20 @@
+# Configuración de sitios para web scraping
+
+sites:
+  # Ejemplo de configuración para un sitio
+  example_site:
+    base_url: "https://example.com"
+    delay: 2  # Retraso entre solicitudes en segundos
+    user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    selectors:
+      title: "h1"
+      content: ".main-content"
+      date: ".publication-date"
+    
+    # Configuración de rate limiting
+    rate_limit:
+      requests_per_minute: 30
+      max_retries: 3
+      retry_delay: 5
+
+  # Agrega más sitios según sea necesario
